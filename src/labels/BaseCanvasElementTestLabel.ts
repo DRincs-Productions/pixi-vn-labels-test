@@ -1,4 +1,4 @@
-import { Assets, canvas, Container, Label, narration, Sprite, Text } from "@drincs/pixi-vn";
+import { Assets, canvas, Container, Label, narration, RotateTicker, Sprite, Text } from "@drincs/pixi-vn";
 import { juliette } from "../characters";
 import { BASE_CANVAS_ELEMENT_LABEL, bunnyImage } from "../constans";
 
