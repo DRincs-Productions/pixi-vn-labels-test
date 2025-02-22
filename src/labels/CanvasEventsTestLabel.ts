@@ -1,48 +1,7 @@
-import { Assets, Texture } from "pixi.js";
-import { CanvasEvent, Label, Sprite } from "../classes";
-import { bunnyImage, bunnyName, CANVAS_EVENTS_TEST_LABEL, juliette } from "../constans";
-import { eventDecorator } from "../decorators";
-import { canvas, narration } from "../managers";
-import { CanvasEventNamesType } from "../types";
-
-@eventDecorator("___pixi_vn_canvas_events_test_event1___")
-export class EventTest1 extends CanvasEvent<Sprite> {
-    override fn(event: CanvasEventNamesType, sprite: Sprite): void {
-        if (event === "pointerdown") {
-            sprite.scale.x *= 1.25;
-            sprite.scale.y *= 1.25;
-        }
-    }
-}
-@eventDecorator("___pixi_vn_canvas_events_test_event2___")
-export class EventTest2 extends CanvasEvent<Sprite> {
-    override fn(event: CanvasEventNamesType, sprite: Sprite): void {
-        if (event === "pointerdown") {
-            (sprite as any).isdown = true;
-            sprite.texture = Texture.from("https://pixijs.com/assets/button_down.png");
-            sprite.alpha = 1;
-        } else if (event === "pointerup" || event === "pointerupoutside") {
-            (sprite as any).isdown = false;
-            if ((sprite as any).isOver) {
-                sprite.texture = Texture.from("https://pixijs.com/assets/button_over.png");
-            } else {
-                sprite.texture = Texture.from("https://pixijs.com/assets/button.png");
-            }
-        } else if (event === "pointerover") {
-            (sprite as any).isOver = true;
-            if ((sprite as any).isdown) {
-                return;
-            }
-            sprite.texture = Texture.from("https://pixijs.com/assets/button_over.png");
-        } else if (event === "pointerout") {
-            (sprite as any).isOver = false;
-            if ((sprite as any).isdown) {
-                return;
-            }
-            sprite.texture = Texture.from("https://pixijs.com/assets/button.png");
-        }
-    }
-}
+import { canvas, juliette, Label, narration, Sprite } from "@drincs/pixi-vn";
+import { Assets } from "pixi.js";
+import { EventTest1, EventTest2 } from "../canvasEvents";
+import { bunnyImage, bunnyName, CANVAS_EVENTS_TEST_LABEL } from "../constans";
 
 export const canvasEventsTestLabel = new Label(
     CANVAS_EVENTS_TEST_LABEL,

@@ -1,8 +1,6 @@
-import { Assets, Color, FillGradient, TextStyle } from "pixi.js";
-import { Container, Label, Sprite, Text } from "../../../pixi-vn/src/classes";
-import { RotateTicker } from "../../../pixi-vn/src/classes/ticker";
-import { canvas, narration } from "../../../pixi-vn/src/managers";
-import { BASE_CANVAS_ELEMENT_LABEL, bunnyImage, juliette } from "../constans";
+import { Assets, canvas, Container, Label, narration, Sprite, Text } from "@drincs/pixi-vn";
+import { juliette } from "../characters";
+import { BASE_CANVAS_ELEMENT_LABEL, bunnyImage } from "../constans";
 
 export const baseCanvasElementTestLabel = new Label(BASE_CANVAS_ELEMENT_LABEL, [
     async () => {

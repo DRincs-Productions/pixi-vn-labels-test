@@ -1,0 +1,2 @@
+export { baseCanvasElementTestLabel } from "./BaseCanvasElementTestLabel";
+
