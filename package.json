@@ -1,0 +1,50 @@
+{
+  "name": "@drincs/pixi-vn-labels-test",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Labels test for Pixi'VN.",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DRincs-Productions/pixi-vn-labels-test.git"
+  },
+  "author": "DRincs-Productions",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/DRincs-Productions/pixi-vn-labels-test/issues"
+  },
+  "homepage": "https://pixi-vn-labels-test.web.app/",
+  "funding": "https://github.com/DRincs-Productions/pixi-vn-labels-test?sponsor=1",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/crypto-js": "^4.2.2",
+    "@types/deep-diff": "^1.0.5",
+    "crypto-js": "^4.2.0",
+    "deep-diff": "^1.0.2",
+    "jsdom": "^26.0.0",
+    "ts-node": "^10.9.2",
+    "tsup": "^8.3.6",
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.5"
+  },
+  "keywords": [
+    "engine",
+    "game",
+    "game-engine",
+    "js",
+    "novel",
+    "pixi",
+    "pixi-js",
+    "visual",
+    "visual-novel"
+  ]
+}
